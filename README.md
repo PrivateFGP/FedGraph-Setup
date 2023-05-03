@@ -53,7 +53,7 @@ Install ophelib (Paillier).
 cd Artifact
 sudo apt install build-essential m4 libtool-bin libgmp-dev libntl-dev
 mkdir HE && cd HE
-git clone https://github.com/abb-iss/ophelib.git
+git clone https://github.com/PrivateFGP/ophelib.git
 cd ophelib
 mkdir build && cd build
 cmake ..
