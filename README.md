@@ -36,6 +36,7 @@ python install.py --deps --tool --ot --sh2pc
 Install SCI-SilentOT.
 
 ```bash
+sudo apt install libgmp-dev libssl-dev
 cd Artifact/MPC/
 git clone https://github.com/PrivateFGP/SCI-SilentOT.git
 cd ./SCI-SilentOT/SCI
