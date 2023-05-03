@@ -33,16 +33,15 @@ cd MPC
 python install.py --deps --tool --ot --sh2pc
 ```
 
-Install EzPC (SCI).
+Install SCI-SilentOT.
 
 ```bash
 cd Artifact/MPC/
-git clone https://github.com/mpc-msri/EzPC.git
-cp fixed-point.h ./EzPC/SCI/src/FloatingPoint/
-cd ./EzPC/SCI
-sudo apt install libgmp-dev libmpfr-dev libssl-dev
+git clone https://github.com/PrivateFGP/SCI-SilentOT.git
+cd ./SCI-SilentOT/SCI
+bash scripts/build-deps.sh
 mkdir build && cd build
-cmake -DCMAKE_INSTALL_PREFIX=./install .. -DNO_REVEAL_OUTPUT=ON
+cmake -DCMAKE_INSTALL_PREFIX=./install -DCMAKE_FIND_DEBUG_MODE=ON .. -DCMAKE_BUILD_TYPE=Debug -DSCI_BUILD_NETWORKS=OFF -DSCI_BUILD_TESTS=ON -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DCMAKE_PREFIX_PATH=$(pwd)/../deps/build -DUSE_APPROX_RESHARE=ON
 cmake --build . --target install --parallel
 ```
 
