@@ -69,7 +69,7 @@ cd Artifact/MPC
 sudo cp -r cmake/* /usr/local/lib/cmake/
 ```
 
-### 1.4 Set Up PSI
+### 1.4 Set Up Communication Backend
 
 ```bash
 cd Artifact
